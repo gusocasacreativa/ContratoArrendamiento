@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>CONTRATO DE ARRENDAMIENTO</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.5;
+            margin: 30px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 5px;
+        }
+
+        input[type="button"] {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+</head>
+<body>
+    <h1>CONTRATO DE ARRENDAMIENTO</h1>
+    <form>
+        <label for="lugarContrato">Lugar donde se celebra el contrato:</label>
+        <input type="text" placeholder="Ejemplo: Monterrey, Nuevo León, México." id="lugarContrato" required><br>
+    
+        <label for="fechaContrato">Fecha:</label>
+        <input type="text" placeholder="Ejemplo: 22 de Abril 2022 " id="fechaContrato" required><br>
+    
+        <label for="domcilioArrendador">Domicilio del Arrendador:</label>
+        <input type="text" placeholder="Ejemplo: Zaragoza 220 Colonia Fátima, Aguascalientes, Ags " id="domcilioArrendador" required><br>
+    
+        <label for="nombreArrendador">Nombre del Arrendador (Nombre Completo):</label>
+        <input type="text" placeholder="Ejemplo: Juan Fernández García"id="nombreArrendador" required><br>
+    
+        <label for="nombreArrendatario">Nombre del Arrendatario (Nombre Completo):</label>
+        <input type="text" placeholder="Ejemplo: Monica García Bernal" id="nombreArrendatario" required><br>
+    
+        <label for="domicilioArrendatario">Domicilio del Arrendatario:</label>
+        <input type="text" placeholder="Ejemplo: Argentina 311 Colonia Vista Hermosa, Monterrey, Nuevo León"id="domicilioArrendatario" required><br>
+    
+        <label for="tiempoRenta">Tiempo a rentar:</label>
+        <input type="text" placeholder="Ejemplo: 1 año / 2 años / 3 años" id="tiempoRenta" required><br>
+    
+        <label for="domicilioInmueble">Dirección del Inmueble:</label>
+        <input type="text" placeholder="Ejemplo: Allende 276 Colonia Centro, Monterrey, Nuevo León" id="domicilioInmueble" required><br>
+    
+        <label for="costoMensual">Costo Mensual:</label>
+        <input type="text" placeholder="Ejemplo: $5,000.00 M.N. Cinco mil pesos mexicanos " id="costoMensual" required><br>
+    
+        <label for="usoPropiedad">Uso que se le dará a la propiedad:</label>
+        <input type="text" placeholder="Ejemplo: Comercial"id="usoPropiedad" required><br>
+    
+        <label for="fechaInicio">Fecha de Inicio:</label>
+        <input type="text" placeholder="Ejemplo: 30 de junio de 2023 "id="fechaInicio" required><br>
+    
+        <label for="fechaTerminacion">Fecha de Terminación:</label>
+        <input type="text" placeholder="Ejemplo: 30 de junio de 2024" id="fechaTerminacion" required><br>
+    
+        <label for="diaPago">Días del Mes para pagar:</label>
+        <input type="text" placeholder="Ejemplo: 1 al 5"id="diaPago" required><br>
+    
+        <label for="cantidadPenalizacion">Penalización por falta de pago:</label>
+        <input type="text" placeholder="Ejemplo: 3% " id="cantidadPenalizacion" required><br>
+    
+        <label for="cantidadDeposito">Depósito en Garantía:</label>
+        <input type="text" placeholder="Ejemplo: $5,000.00 m.n. Cinco mil pesos mexicanos "id="cantidadDeposito" required><br>
+    
+        <label for="fechaAntelacion">Fecha de aviso para dar por terminado el contrato antes de tiempo:</label>
+        <input type="text" placeholder="Ejemplo: 3 meses" id="fechaAntelacion" required><br>
+    
+        <label for="nombreAval">Nombre del Aval:</label>
+        <input type="text" placeholder="Si no tiene aval, solo escriba: SIN AVAL. " id="nombreAval" required><br>
+    
+        <label for="domicilioAval">Domicilio del Aval:</label>
+        <input type="text" placeholder="Si no tiene aval, solo escriba: SIN AVAL "id="domicilioAval" required><br>
+    
+        <label for="nombreTestigo1">Nombre del Testigo 1:</label>
+        <input type="text" placeholder="Nombre completo del Testigo 1" id="nombreTestigo1" required><br>
+    
+        <label for="nombreTestigo2">Nombre del Testigo 2:</label>
+        <input type="text" placeholder="Nombre completo del Testigo 2" id="nombreTestigo2" required><br>
+
+        <p>Si usted requiere asesoría legal personalizada, favor de dar click
+            <a href="https://api.whatsapp.com/send?phone=+524494810263&text=Hola,%20estoy%20interesado%20en%20obtener%20asesor%C3%ADa%20legal%20personalizada.">aquí</a>.</p>
+          
+    
+        <input type="button" value="Imprimir contrato" onclick="imprimirContrato()">
+
+      </form>
+
+    <script>
+        function imprimirContrato() {
+            // Obtener los valores ingresados por el usuario
+            var lugarContrato = document.getElementById("lugarContrato").value;
+      var fechaContrato = document.getElementById("fechaContrato").value;
+      var domicilioArrendador = document.getElementById("domcilioArrendador").value;
+      var nombreArrendador = document.getElementById("nombreArrendador").value;
+      var nombreArrendatario = document.getElementById("nombreArrendatario").value;
+      var domicilioArrendatario = document.getElementById("domicilioArrendatario").value;
+      var tiempoRenta = document.getElementById("tiempoRenta").value;
+      var domicilioInmueble = document.getElementById("domicilioInmueble").value;
+      var costoMensual = document.getElementById("costoMensual").value;
+      var usoPropiedad = document.getElementById("usoPropiedad").value;
+      var fechaInicio = document.getElementById("fechaInicio").value;
+      var fechaTerminacion = document.getElementById("fechaTerminacion").value;
+      var diaPago = document.getElementById("diaPago").value;
+      var cantidadPenalizacion = document.getElementById("cantidadPenalizacion").value;
+      var cantidadDeposito = document.getElementById("cantidadDeposito").value;
+      var fechaAntelacion = document.getElementById("fechaAntelacion").value;
+      var nombreAval = document.getElementById("nombreAval").value;
+      var domicilioAval = document.getElementById("domicilioAval").value;
+      var nombreTestigo1 = document.getElementById("nombreTestigo1").value;
+      var nombreTestigo2 = document.getElementById("nombreTestigo2").value;
+
+      
+
+            // ... (código para obtener los valores ingresados) ...
+
+            var contratoCompleto = `
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    .titulo {
+      text-align: center;
+      font-weight: bold;
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    .seccion {
+      margin-bottom: 20px;
+      text-align: justify;
+    }
+    .firma {
+      margin-top: 30px;
+      text-align: justify;
+    }
+  </style>
+</head>
+<body>
+  <div class="titulo">CONTRATO DE ARRENDAMIENTO</div>
+  <div class="seccion">
+    En ${lugarContrato}<br>
+    A ${fechaContrato}
+  </div>
+  <div class="seccion">
+    Entre ${nombreArrendador}, con domicilio en ${domicilioArrendador}, en adelante
+    denominado como "El arrendador", y ${nombreArrendatario}, con domicilio en 
+    ${domicilioArrendatario}, en adelante denominado como "El arrendatario",se celebra
+    el presente contrato de arrendamiento, de acuerdo con los términos y condiciones
+    siguientes:
+  </div>
+  <div class="seccion">
+    <h2>OBJETO DEL CONTRATO</h2>
+    <p>
+      El objeto del presente contrato es el arrendamiento del inmueble ubicado en 
+      ${domicilioInmueble}, en adelante denominado como "La propiedad", el cual será utilizado
+      exclusivamente como uso ${usoPropiedad}.
+    </p>
+  </div>
+  <div class="seccion">
+    <h2>TÉRMINOS DEL ARRENDAMIENTO</h2>
+    <p>
+      Duración: El presente contrato tendrá una duración de ${tiempoRenta}, a partir del día 
+      ${fechaInicio} y terminará el día ${fechaTerminacion}. Una vez finalizado este plazo, el
+      contrato podrá ser renovado por ambas partes si así lo desean, de común acuerdo y por escrito.
+    </p>
+    <p>
+      Pago del alquiler: El arrendatario se compromete a pagar al arrendador la cantidad de
+      ${costoMensual}, en concepto de alquiler mensual, que deberá ser abonada los días ${diaPago}
+      de cada mes. En caso de que el pago del alquiler no se realice en el plazo establecido,
+      se aplicará una penalización del ${cantidadPenalizacion} sobre el importe total del alquiler.
+    </p>
+    <p>
+      Depósito de garantía: El arrendatario entregará al arrendador un depósito de garantía
+      equivalente a ${cantidadDeposito}, el cual se utilizará para cubrir cualquier
+      daño o perjuicio que pudiera sufrir la propiedad durante la vigencia del contrato. Al
+      finalizar el contrato, si no hay ningún adeudo o daño en la propiedad, el arrendador
+      devolverá el depósito de garantía en su totalidad al arrendatario.
+    </p>
+    <p>
+         Mantenimiento y reparaciones: El arrendador se compromete a mantener la propiedad en buen
+estado y realizar cualquier reparación que sea necesaria para asegurar su habitabilidad.
+El arrendatario deberá informar al arrendador de cualquier daño o desperfecto que surja
+durante su estancia en la propiedad, a fin de que este pueda tomar las medidas necesarias
+para repararlo. El arrendatario será responsable de cualquier daño que cause a la
+propiedad durante su estancia.
+    </p>
+    <p>
+        Subarrendamiento: El arrendatario no podrá subarrendar la propiedad a terceros sin la
+autorización previa y por escrito del arrendador.
+    </p>
+    <p>
+        Finalización del contrato: En caso de que alguna de las partes desee dar por terminado
+el contrato antes de la fecha estipulada, deberá notificar por escrito a la otra parte con
+una antelación mínima de ${fechaAntelacion}. En caso de que el arrendatario abandone la
+propiedad antes de la finalización del contrato sin notificar al arrendador, este último 
+podrá retener el depósito de garantía en su totalidad.
+    </p>
+    <p>
+        Ley aplicable: Este contrato se regirá por las leyes vigentes en la República Mexicana, y
+para cualquier controversia que pudiera surgir en relación con su interpretación o cumplimiento, 
+las partes se someten a la jurisdicción de los tribunales competentes de ${lugarContrato}.
+    </p>
+    <p>
+        Modificaciones: Cualquier modificación o enmienda a este contrato deberá ser realizada por
+escrito y contar con la firma de ambas partes.
+    </p>
+    <p>
+        Notificaciones: Toda notificación o comunicación relacionada con este contrato deberá ser realizada
+por escrito y entregada personalmente o enviada por correo certificado a las direcciones indicadas
+por las partes en este contrato.
+    </p>
+    <p>Cláusula de separabilidad: En caso de que alguna cláusula de este contrato sea considerada inválida 
+o no exigible por un tribunal competente, dicha cláusula será separada del contrato, sin afectar 
+la validez y exigibilidad de las demás cláusulas.
+</p>    
+<p>
+    Acuerdo completo: Este contrato contiene el acuerdo completo entre las partes y sustituye cualquier 
+otro acuerdo o entendimiento previo, ya sea oral o escrito, relacionado con el arrendamiento de 
+la propiedad.
+</p>
+    
+  </div>
+  <div class="seccion">
+    <h2>FIRMA DE LAS PARTES:</h2>
+    <div class="firma">
+      <p>EL ARRENDADOR:</p>
+      <p>______________________</p>
+      <p>[FIRMA DEL ARRENDADOR]</p>
+      <p>${nombreArrendador}</p>
+    </div>
+    <div class="firma">
+  <p>EL ARRENDATARIO:</p>
+  <p>______________________</p>
+  <p>[FIRMA DEL ARRENDATARIO]</p>
+  <p>${nombreArrendatario}</p>
+</div>
+<div class="firma">
+  <p>Testigos:</p>
+  <p>______________________</p>
+  <p>[Firma del testigo 1]</p>
+  <p>${nombreTestigo1}</p>
+  <p>______________________</p>
+  <p>[Firma del testigo 2]</p>
+  <p>${nombreTestigo2}</p>
+
+
+
+  
+</div>
+</div>
+</body>
+</html>
+
+`;
+
+// Resto del código...
+
+          
+
+            // Abrir una nueva ventana para imprimir el contrato
+            var ventanaImpresion = window.open('', '_blank');
+            ventanaImpresion.document.write('<html><head><title>Contrato de Arrendamiento</title></head><body>');
+            ventanaImpresion.document.write(contratoCompleto);
+            ventanaImpresion.document.write('</body></html>');
+            ventanaImpresion.document.close();
+            ventanaImpresion.print();
+        }
+    </script>
+</body>
+</html>

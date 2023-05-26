@@ -1,0 +1,14 @@
+{
+    "manifest_version": 3,
+    "name": "Contrato de Arrendamiento",
+    "version": "1.0",
+    "action": {
+      "default_popup": "contratofinal.html"
+    },
+    "icons": {
+      "16": "icon.png",
+      "48": "icon_48.png",
+      "128": "icon_128.png"
+    }
+  }
+  
